@@ -11,10 +11,10 @@ Installation and configuration
 
 This plugin requires a [http://simplesamlphp.org/docs/stable/simplesamlphp-sp](simmpleSAMLphp instance configured as an SP)
 
-After that you will be enable to deploy your SAML plugin over your limesurvey environment.
+After that you will be able to enable your SAML plugin in order to add SAML support to your Limesurvey instance.
 
 
-Copy the AuthSAML folder inside core/plugins/
+Copy the AuthSAML folder inside the folder plugins
 
 Access to the Limesurvey platform, enable the SAML plugin and configure the following parameters:
 
