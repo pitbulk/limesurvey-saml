@@ -3,6 +3,7 @@
  * SAML Authentication plugin for LimeSurvey
  * Copyright (C) 2013 Sixto Pablo Martin Garcia <sixto.martin.garcia@gmail.com>
  * License: GNU/GPL License v2 http://www.gnu.org/licenses/gpl-2.0.html
+ * URL: https://github.com/pitbulk/limesurvey-saml
  * A plugin of LimeSurvey, a free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
  * is derivative of works licensed under the GNU General Public License or
