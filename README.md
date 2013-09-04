@@ -9,7 +9,7 @@ The limesurvey-saml-0.1 works with limesurvey 2.0.5
 Installation and configuration
 ------------------------------
 
-This plugin requires a [http://simplesamlphp.org/docs/stable/simplesamlphp-sp](simmpleSAMLphp instance configured as an SP)
+This plugin requires a [simpleSAMLphp instance configured as an SP](http://simplesamlphp.org/docs/stable/simplesamlphp-sp)
 
 After that you will be able to enable your SAML plugin in order to add SAML support to your Limesurvey instance.
 
