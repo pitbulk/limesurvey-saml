@@ -59,7 +59,7 @@ Install simpleSAMLphp
 
 First of all install the [simpleSAMLphp library dependences](http://simplesamlphp.org/docs/stable/simplesamlphp-install#section_3):
 
-    CentOS --> yum install php5 php-ldap php-mbstring php-xml mod_ssl openssl
+    CentOS --> yum install php5 php-ldap php-mcrypt php-mbstring php-xml mod_ssl openssl
     Debian --> apt-get install php5 php5-mcrypt php5-mhash php5-mysql openssl
 
 
