@@ -1,3 +1,18 @@
+
+Warning!
+========
+This SAML plugin only works for very old Limesurvey instances.
+
+If you are using LimeSurvey 3.14+, use the extension:
+https://github.com/Frankniesten/Limesurvey-SAML-Authentication
+
+In addition, I implemented comercial SAML plugin based on simpleSAMLphp as well as a version based on
+php-saml which allow you add the IdP settings on the LimeSurvey SAML settings.
+
+Soon will be available at the LimeStore, but if you you need it now, contact me at sixto.martin.garcia+limesurvey@gmail.com
+I also offer commercial support for 50€/h payable via Paypal or Wire-Transfer.
+
+
 limesurvey-saml  (version 0.1)
 ==============================
 
@@ -13,7 +28,7 @@ This plugin allow you enable different workflows:
     Allow to only let saml authentication login.
 
     When the user access to the login page, he will be redirected to the IdP. After authenticate:
- 
+
       a) If is the first time, the user account will be created (stored in the file)
 
       b) If the account already exists, the user account will be updated (stored in the file)
@@ -153,9 +168,9 @@ And set admin and an sp source. Something like:
                     'saml:SP',
 
                     'entityID' => 'https://sp.example.com/simplesaml/module.php/saml/sp/metadata.php/limesurvey',
-                    
+
                     'idp' => 'https://idp.example.com/simplesaml/saml2/idp/metadata.php', # Set the entityID of the IdP you gonna use
-		
+
                     'privatekey' => 'server.pem',
                     'certificate' => 'server.crt',
                 ),
@@ -200,7 +215,7 @@ NTP server
 
 To get Saml2 run correctly we need have sure that all machine's clock are synced.
 
-Install ntp: 
+Install ntp:
 
     Centos --> yum install ntp
     Debian --> apt-get install ntp
@@ -259,4 +274,3 @@ Access to the Limesurvey platform, enable the SAML plugin and configure the foll
  * auto_update_users: Let the SAML auth plugin update users on limesurvey.
 
  * force_saml_login: Enable it when you want to only allow SAML authentication on limesurvey (no login form will be showed)
-
