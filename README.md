@@ -10,6 +10,7 @@ In addition, I implemented comercial SAML plugin based on simpleSAMLphp as well 
 php-saml which allows you adding the IdP settings on the LimeSurvey SAML configuration section.
 
 Soon will be available at the LimeStore, but if you need it now, contact me at sixto.martin.garcia+limesurvey@gmail.com
+
 I also offer commercial support for 50€/h payable via Paypal or Wire-Transfer.
 
 
