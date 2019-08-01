@@ -7,7 +7,7 @@ If you are using LimeSurvey 3.14+, use the extension:
 https://github.com/Frankniesten/Limesurvey-SAML-Authentication
 
 In addition, I implemented comercial SAML plugin based on simpleSAMLphp as well as a version based on
-php-saml which allow you add the IdP settings on the LimeSurvey SAML settings.
+php-saml which allows you adding the IdP settings on the LimeSurvey SAML settings.
 
 Soon will be available at the LimeStore, but if you you need it now, contact me at sixto.martin.garcia+limesurvey@gmail.com
 I also offer commercial support for 50€/h payable via Paypal or Wire-Transfer.
