@@ -60,6 +60,36 @@ class AuthSAML extends AuthPluginBase
             'label' => 'Auto create users',
             'default' => true,
         ),
+		'auto_create_labelsets' => array(
+            'type' => 'checkbox',
+            'label' => '- Permissions: Label Sets',
+            'default' => false,
+        ),
+		'auto_create_participant_panel' => array(
+            'type' => 'checkbox',
+            'label' => '- Permissions: Participant panel',
+            'default' => false,
+        ),
+		'auto_create_settings_plugins' => array(
+            'type' => 'checkbox',
+            'label' => '- Permissions: Settings & Plugins',
+            'default' => false,
+        ),
+		'auto_create_surveys' => array(
+            'type' => 'checkbox',
+            'label' => '- Permissions: Surveys',
+            'default' => true,
+        ),
+		'auto_create_templates' => array(
+            'type' => 'checkbox',
+            'label' => '- Permissions: Templates',
+            'default' => false,
+        ),
+		'auto_create_user_groups' => array(
+            'type' => 'checkbox',
+            'label' => '- Permissions: User groups',
+            'default' => false,
+        ), 
         'auto_update_users' => array(
             'type' => 'checkbox',
             'label' => 'Auto update users',
@@ -67,7 +97,7 @@ class AuthSAML extends AuthPluginBase
         ),
         'force_saml_login' => array(
             'type' => 'checkbox',
-            'label' => 'Force SAML login.',
+            'label' => 'Force SAML login.', 
         ),
     );
     
@@ -211,7 +241,51 @@ class AuthSAML extends AuthPluginBase
                     if ($iNewUID)
                     {
                         Permission::model()->insertSomeRecords(array('uid' => $iNewUID, 'permission' => Yii::app()->getConfig("defaulttemplate"),   'entity'=>'template', 'read_p' => 1));
+                        
+						// Set permissions: Label Sets 
+                        $auto_create_labelsets = $this->get('auto_create_labelsets', null, null, true);
+                        if ($auto_create_labelsets) {
 
+                 		Permission::model()->insertSomeRecords(array('uid' => $iNewUID, 'permission' => 'labelsets',   'entity'=>'global', 'create_p' => 1, 'read_p' => 1, 'update_p' => 1, 'delete_p' => 1, 'import_p' => 1, 'export_p' => 1));
+ 						}
+						
+						// Set permissions: Particiapnt Panel 
+                        $auto_create_participant_panel = $this->get('auto_create_participant_panel', null, null, true);
+                        if ($auto_create_participant_panel) {
+
+                 		Permission::model()->insertSomeRecords(array('uid' => $iNewUID, 'permission' => 'participantpanel',   'entity'=>'global', 'create_p' => 1, 'read_p' => 1, 'update_p' => 1, 'delete_p' => 1, 'export_p' => 1));
+ 						}
+						
+						// Set permissions: Settings & Plugins 
+                        $auto_create_settings_plugins = $this->get('auto_create_settings_plugins', null, null, true);
+                        if ($auto_create_settings_plugins) {
+
+                 		Permission::model()->insertSomeRecords(array('uid' => $iNewUID, 'permission' => 'settings',   'entity'=>'global', 'create_p' => 0, 'read_p' => 1, 'update_p' => 1, 'delete_p' => 0, 'import_p' => 1, 'export_p' => 0));
+ 						}
+						
+						// Set permissions: surveys 
+                        $auto_create_surveys = $this->get('auto_create_surveys', null, null, true);
+                        if ($auto_create_surveys) {
+
+                 		Permission::model()->insertSomeRecords(array('uid' => $iNewUID, 'permission' => 'surveys',   'entity'=>'global', 'create_p' => 1, 'read_p' => 1, 'update_p' => 1, 'delete_p' => 1, 'export_p' => 1));
+ 						}
+						
+						// Set permissions: Templates 
+                        $auto_create_templates = $this->get('auto_create_templates', null, null, true);
+                        if ($auto_create_templates) {
+
+                 		Permission::model()->insertSomeRecords(array('uid' => $iNewUID, 'permission' => 'templates',   'entity'=>'global', 'create_p' => 1, 'read_p' => 1, 'update_p' => 1, 'delete_p' => 1, 'import_p' => 1, 'export_p' => 1));
+ 						}
+					
+						// Set permissions: User Groups 
+                        $auto_create_user_groups = $this->get('auto_create_user_groups', null, null, true);
+                        if ($auto_create_user_groups) {
+
+                 		Permission::model()->insertSomeRecords(array('uid' => $iNewUID, 'permission' => 'usergroups',   'entity'=>'global', 'create_p' => 1, 'read_p' => 1, 'update_p' => 1, 'delete_p' => 1, 'export_p' => 0));
+ 						}
+						
+						
+						
                         // read again user from newly created entry
                         $oUser = $this->api->getUserByName($sUser);
 
@@ -234,7 +308,9 @@ class AuthSAML extends AuthPluginBase
                     );
 
                     User::model()->updateByPk($oUser->uid, $changes);
-                    $oUser = $this->api->getUserByName($sUser);
+		   
+
+ $oUser = $this->api->getUserByName($sUser);
                 }
 
                 $this->setAuthSuccess($oUser);
