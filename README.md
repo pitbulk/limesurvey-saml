@@ -18,7 +18,7 @@ It is compatible with Limesurvey3 and Limesurvey4 and has multiple features:
 - Ability to force SAML login on Limesurvey Login form.
 - Avoid accounts created by SAML to login using normal login
 
-Soon will be available at the LimeStore, but if you need it now, contact me at sixto.martin.garcia+limesurvey@gmail.com
+Soon will be available at the LimeStore with a price of 150€, but if you need it now, contact me at sixto.martin.garcia+limesurvey@gmail.com
 
 I also offer commercial support for 50€/h payable via Paypal or Wire-Transfer.
 
