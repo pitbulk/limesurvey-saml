@@ -5,7 +5,14 @@ This SAML plugin only works for very old Limesurvey instances. (2.X)
 
 I implemented comercial SAML plugin based on simpleSAMLphp as well as a version based on
 php-saml which allows you adding the IdP settings on the LimeSurvey SAML configuration section.
-It is compatible with Limesurvey3 and Limesurvey4 and has multiple features:
+It is compatible with LimeSurvey3, LimeSurvey4 and LimeSurvey5.
+
+It's prize is 150€. I wanted to make it available on the LimeStore but that marketplace seems not ready.
+Contact me at sixto.martin.garcia+limesurvey@gmail.com
+I also offer commercial support for 50€/h payable via Paypal or Wire-Transfer.
+
+
+Some of the features of the plugin:
 
 - Based on simpleSAMLphp or php-saml (configuration directly done on Limesurvey settings, instead simpleSAMLphp that manages it via filesystem).
 - Supports multiple Identity providers
@@ -18,9 +25,6 @@ It is compatible with Limesurvey3 and Limesurvey4 and has multiple features:
 - Ability to force SAML login on Limesurvey Login form.
 - Avoid accounts created by SAML to login using normal login
 
-Soon will be available at the LimeStore with a price of 150€, but if you need it now, contact me at sixto.martin.garcia+limesurvey@gmail.com
-
-I also offer commercial support for 50€/h payable via Paypal or Wire-Transfer.
 
 
 limesurvey-saml  (version 0.1)
